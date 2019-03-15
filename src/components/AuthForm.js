@@ -27,7 +27,7 @@ export default class AuthForm extends Component {
 
   render() {
     const { email, username, password, profileUrl } = this.state;
-    const { heading, buttonText } = this.props;
+    const { heading, buttonText, signup } = this.props;
     return (
       <div>
         <div className="row justify-content-md-center text-center">
@@ -51,6 +51,27 @@ export default class AuthForm extends Component {
                 onChange={this.handleChange}
                 type="password"
               />
+              {signup && (
+                <div>
+                  <label htmlFor="username">Username:</label>
+                  <input
+                    className="form-control"
+                    id="username"
+                    name="username"
+                    onChange={this.handleChange}
+                    value={username}
+                    type="text"
+                  />
+                  <label htmlFor="image-url">Image URL:</label>
+                  <input
+                    className="form-control"
+                    id="image-url"
+                    name="ProfileImageUrl"
+                    onChange={this.handleChange}
+                    type="ProfileImageUrl"
+                  />
+                </div>
+              )}
             </form>
           </div>
         </div>
