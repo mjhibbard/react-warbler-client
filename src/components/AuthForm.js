@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 // import PropTypes from "prop-types";
-import errors from "../store/reducers/errors";
+// import errors from "../store/reducers/errors";
 
 export default class AuthForm extends Component {
   constructor(props) {
@@ -59,39 +59,45 @@ export default class AuthForm extends Component {
               )}
               <label htmlFor="email">Email:</label>
               <input
+                // autoComplete="off"
                 className="form-control"
                 id="email"
                 name="email"
                 onChange={this.handleChange}
-                value={email}
                 type="text"
+                value={email}
               />
               <label htmlFor="password">Password:</label>
               <input
+                // autoComplete="off"
                 className="form-control"
                 id="password"
                 name="password"
                 onChange={this.handleChange}
                 type="password"
+                value={password}
               />
               {signup && (
                 <div>
                   <label htmlFor="username">Username:</label>
                   <input
+                    autoComplete="off"
                     className="form-control"
                     id="username"
                     name="username"
                     onChange={this.handleChange}
-                    value={username}
                     type="text"
+                    value={username}
                   />
-                  <label htmlFor="image-url">Image URL:</label>
+                  <label htmlFor="profileUrl">Image URL:</label>
                   <input
+                    // autoComplete="off"
                     className="form-control"
                     id="image-url"
                     name="ProfileImageUrl"
                     onChange={this.handleChange}
                     type="text"
+                    // value={profileUrl}
                   />
                 </div>
               )}
