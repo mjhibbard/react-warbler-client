@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 // import errors from "../store/reducers/errors";
 
 export default class AuthForm extends Component {
@@ -9,7 +9,7 @@ export default class AuthForm extends Component {
       email: "",
       username: "",
       password: "",
-      profileUrl: ""
+      profileImageUrl: ""
     };
   }
 
@@ -34,7 +34,7 @@ export default class AuthForm extends Component {
   };
 
   render() {
-    const { email, username, password, profileUrl } = this.state;
+    const { email, username, password, profileImageUrl } = this.state;
     const {
       heading,
       buttonText,
@@ -89,15 +89,15 @@ export default class AuthForm extends Component {
                     type="text"
                     value={username}
                   />
-                  <label htmlFor="profileUrl">Image URL:</label>
+                  <label htmlFor="profileImageUrl">Profile Image URL:</label>
                   <input
                     // autoComplete="off"
                     className="form-control"
                     id="image-url"
-                    name="ProfileImageUrl"
+                    name="profileImageUrl"
                     onChange={this.handleChange}
                     type="text"
-                    // value={profileUrl}
+                    // value={profileImageUrl}
                   />
                 </div>
               )}
